@@ -1,7 +1,6 @@
 # FF6ExpED
+####version: 0.1
 
-creator: madsiur\\
-version: 0.1
 
 FF6ExpED is an FF3us (FF6) WPF editor that aims to expand some data of the game, manage these expansions and allow data editing.
 Right now only dropped items by monsters can be edited. They are expanded to 4 per monster instead of 2 and the global drop chances can be edited.
