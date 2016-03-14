@@ -1,6 +1,6 @@
 # FF6ExpED
 
-creator: madsiur
+creator: madsiur\\
 version: 0.1
 
 FF6ExpED is an FF3us (FF6) WPF editor that aims to expand some data of the game, manage these expansions and allow data editing.
