@@ -1,0 +1,90 @@
+﻿<Window x:Class="FF6exped.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:FF6exped="clr-namespace:FF6exped.CustomControls.CustomComboBox"
+        xmlns:cl="clr-namespace:FF6exped.Misc"
+        xmlns:local="clr-namespace:FF6exped"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="376.042" Width="605.208">
+    <Grid>
+        <Menu x:Name="EditorMenu" IsMainMenu="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"  Width="596" RenderTransformOrigin="-0.907,0.15" BorderThickness="1,2,2,2" Background="#202020" Foreground="#F0F0F0" Opacity="0.8">
+            <MenuItem x:Name="MenuItemFile" Header="_File"  Height="26" Width="45" HorizontalAlignment="Center" BorderThickness="3,3,3,3">
+                <MenuItem x:Name="MenuItemOpen" Header="_Open" Foreground="#101010" Click="MenuItemOpen_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/open_icon.png" Height="16" Width="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItemSave" Header="_Save" Foreground="#101010" Click="MenuItemSave_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/save_icon.png" Height="16" Width="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItemExit" Header="_Exit" Foreground="#101010" Click="MenuItemExit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/magicite_icon.png" Height="16" Width="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TabControl x:Name="TabControlDrops" IsEnabled="False" Height="340" VerticalAlignment="Top" Margin="0,30,0,0">
+            <TabItem x:Name="TabItemDrops" Header="Dropped Items">
+                <Grid x:Name="DropsEditor" Background="#FFE5E5E5">
+                    <FF6exped:CustomComboBox x:Name="CmbDropMonster" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="8,8,0,0" />
+                    <Button x:Name="BtnDropMonsBack" HorizontalAlignment="Left" Style="{DynamicResource BorderButton}" Margin="158,7,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="BtnDropMonsBack_Click">
+                        <Image Source="Resources/arrow_large_left.png" Stretch="Fill" />
+                    </Button>
+                    <Button x:Name="BtnDropMonsForward" HorizontalAlignment="Left" Style="{DynamicResource BorderButton}" Margin="184,7,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="BtnDropMonsForward_Click">
+                        <Image Source="Resources/arrow_large_right.png" Stretch="Fill" />
+                    </Button>
+                    <FF6exped:CustomComboBox x:Name="CmbDropA" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,8,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropB" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,38,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,68,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropD" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,98,8,0" />
+                    <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 6,196,0" />
+                    <Label Content="Level 2:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 36,196,0" />
+                    <Label Content="Level 3:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 66,196,0" />
+                    <Label Content="Level 4:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 96,196,0" />
+                    <Label Content="Drop Chances for all Monsters" Width="200" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,36,0,0" />
+                    <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,60,0,0" />
+                    <TextBox x:Name="TbDropA" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,64,0,0"  VerticalAlignment="Top" LostFocus="TbDropA_LostFocus"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,60,0,0" />
+                    <Label x:Name="LblDropA" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,60,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,60,0,0" />
+                    <Label Content="Level 2:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,85,0,0" />
+                    <TextBox x:Name="TbDropB" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,89,0,0"  VerticalAlignment="Top" LostFocus="TbDropB_LostFocus"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,85,0,0" />
+                    <Label x:Name="LblDropB" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,85,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,85,0,0" />
+                    <Label Content="Level 3:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,110,0,0" />
+                    <TextBox x:Name="TbDropC" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,114,0,0"  VerticalAlignment="Top" LostFocus="TbDropC_LostFocus"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,110,0,0" />
+                    <Label x:Name="LblDropC" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,110,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,110,0,0" />
+                    <Label Content="Level 4:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,135,0,0" />
+                    <TextBox x:Name="TbDropD" IsEnabled="false" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,139,0,0"  VerticalAlignment="Top"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,135,0,0" />
+                    <Label x:Name="LblDropD" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,135,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,135,0,0" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemSteal" Header="Stolen Items">
+                <Grid x:Name="StealEditor" Background="#FFE5E5E5">
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemConfig" Header="Configuration">
+                <Grid x:Name="ConfigEditor" Background="#FFE5E5E5" >
+                    <Label Content="New ASM code offset:" HorizontalAlignment="Left" Margin="16,48,0,0"  VerticalAlignment="Top"/>
+                    <Label Content="Drop/Steal table offset:" HorizontalAlignment="Left" Margin="16,16,0,0"  VerticalAlignment="Top"/>
+                    <TextBox x:Name="TbDropTable" MaxLength="6" Width="80" HorizontalAlignment="Left" Margin="156,20,0,0"  VerticalAlignment="Top" LostFocus="TbDropTable_LostFocus" />
+                    <TextBox x:Name="TbDropCode" MaxLength="6" Width="80" HorizontalAlignment="Left" Margin="156,52,0,0"  VerticalAlignment="Top" LostFocus="TbDropCode_LostFocus"/>
+                    <Label Content="h  (0xC00 bytes required)" HorizontalAlignment="Left" Margin="234,16,0,0"  VerticalAlignment="Top"/>
+                    <Label Content="h  (0x100 bytes required)" HorizontalAlignment="Left" Margin="234,48,0,0"  VerticalAlignment="Top"/>
+                    <Button Name="BtnExpand" Content="Expand" HorizontalAlignment="Left" Margin="156,82,0,0" Width="79" VerticalAlignment="Top" Click="BtnExpand_Click" />
+                    <CheckBox x:Name="CkBackup" Width="90" Content="Backup ROM" HorizontalAlignment="Right" Margin="0,20,16,0"  VerticalAlignment="Top" Checked="CkBackup_CheckedChanged"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
