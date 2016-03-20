@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <ApplicationIcon>main_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -170,9 +170,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\magicite_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\open_icon.png" />
     <Resource Include="Resources\save_icon.png" />
   </ItemGroup>
@@ -181,7 +178,10 @@
     <Resource Include="Resources\arrow_large_right.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="logo.ico" />
+    <Resource Include="Resources\kain_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="main_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

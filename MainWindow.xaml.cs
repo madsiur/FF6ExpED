@@ -88,7 +88,9 @@ namespace FF6exped
                     }
                     else
                     {
-                        if(Properties.Settings.Default.UseBackup)
+                        // Not working for now
+
+                        /*if(Properties.Settings.Default.UseBackup)
                         {
                             string path = System.IO.Path.GetDirectoryName(dlg.FileName);
                             string backupName = "\\backup" + DateTime.Now.ToString("YYYYMMddhhmmss") + ".smc";
@@ -102,7 +104,7 @@ namespace FF6exped
                             {
                                 MessageBox.Show("Unable to create backup file. \n \n Exception: " + ex.Message.ToString(), APPNAME);
                             }
-                        }
+                        }*/
 
                         font = new SmallFont(rom);
 
@@ -123,7 +125,7 @@ namespace FF6exped
                             if(codeOffsetAbs < 0 || codeOffsetAbs > 0x5FFFFF)
                             {
                                 MessageBox.Show("Wrong offset! Modified code cannot be found. (offset found: 0x" + codeOffset.ToString("X6") + ") \n\n The application will now close.", APPNAME);
-                                DeleteBackup();
+                                //DeleteBackup();
                                 Application.Current.Shutdown();
                             }
                             else
@@ -303,7 +305,7 @@ namespace FF6exped
 
         private void MenuItemExit_Click(object sender, RoutedEventArgs e)
         {
-            DeleteBackup();
+            //DeleteBackup();
             Application.Current.Shutdown();
         }
 
@@ -557,7 +559,7 @@ namespace FF6exped
             int total = dropA + dropB + dropC;
             int dropD = 256 - total;
 
-            if (total <= 256)
+            if (total <= 255)
             {
                 binOk = true;
                 TbDropD.Text = dropD.ToString();
@@ -569,7 +571,7 @@ namespace FF6exped
             }
             else
             {
-                MessageBox.Show("Error! Total of three first drop chances must not exceed 256 !", APPNAME);
+                MessageBox.Show("Error! Total of three first drop chances must not exceed 255 !", APPNAME);
             }
 
             return binOk;

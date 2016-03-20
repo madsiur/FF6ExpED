@@ -7,7 +7,7 @@
         xmlns:cl="clr-namespace:FF6exped.Misc"
         xmlns:local="clr-namespace:FF6exped"
         mc:Ignorable="d"
-        Title="MainWindow" Height="376.042" Width="605.208">
+        Title="FF6ExpED" Height="376.042" Width="605.208">
     <Grid>
         <Menu x:Name="EditorMenu" IsMainMenu="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"  Width="596" RenderTransformOrigin="-0.907,0.15" BorderThickness="1,2,2,2" Background="#202020" Foreground="#F0F0F0" Opacity="0.8">
             <MenuItem x:Name="MenuItemFile" Header="_File"  Height="26" Width="45" HorizontalAlignment="Center" BorderThickness="3,3,3,3">
@@ -23,7 +23,7 @@
                 </MenuItem>
                 <MenuItem x:Name="MenuItemExit" Header="_Exit" Foreground="#101010" Click="MenuItemExit_Click">
                     <MenuItem.Icon>
-                        <Image Source="/Resources/magicite_icon.png" Height="16" Width="16" />
+                        <Image Source="/Resources/kain_icon.png" Height="16" Width="16" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
