@@ -74,7 +74,7 @@ namespace FF6exped.Misc
                 itemNames.Add(new ComboBoxInfo { ImageBitmap = ItemList.ElementAt(i).image });
             }
 
-            ItemList.Add(new TextEntry("Nothing", font, 8));
+            ItemList.Add(new TextEntry(" Nothing", font, 8));
             itemNames.Add(new ComboBoxInfo { ImageBitmap = ItemList.ElementAt(255).image });
         }
     }

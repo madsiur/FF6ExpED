@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <Style x:Key="ComboBoxBorderStyle" TargetType="Border">
             <Setter Property="BorderBrush" Value="#FF000080" />
-            <Setter Property="BorderThickness" Value="0 4 0 2" />
+            <Setter Property="BorderThickness" Value="0 2 0 2" />
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#FF000080"/>
@@ -24,7 +24,7 @@
                 <Style TargetType="ComboBoxItem" x:Name="ContainerStyle">
                     <Setter Property="Background" Value="#FF000080" />
                     <Setter Property="BorderBrush" Value="#FF000080" />
-                    <Setter Property="Width" Value="145" />
+                    <Setter Property="Width" Value="120" />
                     <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor"/>
                     <Setter Property="RenderOptions.EdgeMode" Value="Aliased"/>
                     <Style.Triggers>
@@ -38,7 +38,7 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Background="#FF000080">
                         <Border Style="{StaticResource ComboBoxBorderStyle}">
-                            <Image Source="{Binding ImageBitmap}" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased" Width="185" Height="8" HorizontalAlignment="Left" Margin="5, 0, 0, 0" />
+                            <Image Source="{Binding ImageBitmap}" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased" Width="120" Height="8" HorizontalAlignment="Left" Margin="1, 0, 0, 0" />
                         </Border>
                     </StackPanel>
                 </DataTemplate>

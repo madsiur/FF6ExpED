@@ -34,9 +34,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>main_icon.ico</ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -178,10 +179,10 @@
     <Resource Include="Resources\arrow_large_right.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\kain_icon.png" />
+    <Resource Include="logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="main_icon.ico" />
+    <Resource Include="Resources\exit_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

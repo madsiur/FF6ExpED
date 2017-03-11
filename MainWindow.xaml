@@ -23,7 +23,7 @@
                 </MenuItem>
                 <MenuItem x:Name="MenuItemExit" Header="_Exit" Foreground="#101010" Click="MenuItemExit_Click">
                     <MenuItem.Icon>
-                        <Image Source="/Resources/kain_icon.png" Height="16" Width="16" />
+                        <Image Source="/Resources/exit_icon.png" Height="16" Width="16" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
@@ -31,21 +31,21 @@
         <TabControl x:Name="TabControlDrops" IsEnabled="False" Height="340" VerticalAlignment="Top" Margin="0,30,0,0">
             <TabItem x:Name="TabItemDrops" Header="Dropped Items">
                 <Grid x:Name="DropsEditor" Background="#FFE5E5E5">
-                    <FF6exped:CustomComboBox x:Name="CmbDropMonster" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="8,8,0,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropMonster" HorizontalAlignment="Left" VerticalAlignment="Top" Width="139" Margin="8,8,0,0" />
                     <Button x:Name="BtnDropMonsBack" HorizontalAlignment="Left" Style="{DynamicResource BorderButton}" Margin="158,7,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="BtnDropMonsBack_Click">
                         <Image Source="Resources/arrow_large_left.png" Stretch="Fill" />
                     </Button>
                     <Button x:Name="BtnDropMonsForward" HorizontalAlignment="Left" Style="{DynamicResource BorderButton}" Margin="184,7,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="BtnDropMonsForward_Click">
                         <Image Source="Resources/arrow_large_right.png" Stretch="Fill" />
                     </Button>
-                    <FF6exped:CustomComboBox x:Name="CmbDropA" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,8,8,0" />
-                    <FF6exped:CustomComboBox x:Name="CmbDropB" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,38,8,0" />
-                    <FF6exped:CustomComboBox x:Name="CmbDropC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,68,8,0" />
-                    <FF6exped:CustomComboBox x:Name="CmbDropD" HorizontalAlignment="Right" VerticalAlignment="Top" Width="190" Margin="0,98,8,0" />
-                    <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 6,196,0" />
-                    <Label Content="Level 2:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 36,196,0" />
-                    <Label Content="Level 3:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 66,196,0" />
-                    <Label Content="Level 4:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 96,196,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropA" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,8,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropB" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,38,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,68,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbDropD" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,98,8,0" />
+                    <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5,145,0" />
+                    <Label Content="Level 2:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 35,145,0" />
+                    <Label Content="Level 3:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 65,145,0" />
+                    <Label Content="Level 4:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 95,145,0" />
                     <Label Content="Drop Chances for all Monsters" Width="200" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,36,0,0" />
                     <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,60,0,0" />
                     <TextBox x:Name="TbDropA" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,64,0,0"  VerticalAlignment="Top" LostFocus="TbDropA_LostFocus"/>
@@ -71,6 +71,42 @@
             </TabItem>
             <TabItem x:Name="TabItemSteal" Header="Stolen Items">
                 <Grid x:Name="StealEditor" Background="#FFE5E5E5">
+                    <FF6exped:CustomComboBox x:Name="CmbStealMonster" HorizontalAlignment="Left" VerticalAlignment="Top" Width="139" Margin="8,8,0,0" />
+                    <Button x:Name="BtnStealMonsBack" HorizontalAlignment="Left" Style="{DynamicResource BorderButton}" Margin="158,7,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="BtnStealMonsBack_Click">
+                        <Image Source="Resources/arrow_large_left.png" Stretch="Fill" />
+                    </Button>
+                    <Button x:Name="BtnStealMonsForward" HorizontalAlignment="Left" Style="{DynamicResource BorderButton}" Margin="184,7,0,0" VerticalAlignment="Top" Width="22" Height="22" Click="BtnStealMonsForward_Click">
+                        <Image Source="Resources/arrow_large_right.png" Stretch="Fill" />
+                    </Button>
+                    <FF6exped:CustomComboBox x:Name="CmbStealA" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,8,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbStealB" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,38,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbStealC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,68,8,0" />
+                    <FF6exped:CustomComboBox x:Name="CmbStealD" HorizontalAlignment="Right" VerticalAlignment="Top" Width="139" Margin="0,98,8,0" />
+                    <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5,145,0" />
+                    <Label Content="Level 2:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 35,145,0" />
+                    <Label Content="Level 3:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 65,145,0" />
+                    <Label Content="Level 4:" Width="50" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 95,145,0" />
+                    <Label Content="Stealable item Chances for all Monsters" Width="260" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,36,0,0" />
+                    <Label Content="Level 1:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,60,0,0" />
+                    <TextBox x:Name="TbStealA" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,64,0,0"  VerticalAlignment="Top" LostFocus="TbStealA_LostFocus"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,60,0,0" />
+                    <Label x:Name="LblStealA" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,60,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,60,0,0" />
+                    <Label Content="Level 2:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,85,0,0" />
+                    <TextBox x:Name="TbStealB" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,89,0,0"  VerticalAlignment="Top" LostFocus="TbStealB_LostFocus"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,85,0,0" />
+                    <Label x:Name="LblStealB" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,85,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,85,0,0" />
+                    <Label Content="Level 3:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,110,0,0" />
+                    <TextBox x:Name="TbStealC" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,114,0,0"  VerticalAlignment="Top" LostFocus="TbStealC_LostFocus"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,110,0,0" />
+                    <Label x:Name="LblStealC" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,110,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,110,0,0" />
+                    <Label Content="Level 4:" Width="50" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,135,0,0" />
+                    <TextBox x:Name="TbStealD" IsEnabled="false" MaxLength="3" Width="40" HorizontalAlignment="Left" Margin="56,139,0,0"  VerticalAlignment="Top"/>
+                    <Label Content="/ 256" Width="40" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,135,0,0" />
+                    <Label x:Name="LblStealD" Content="" Width="30" HorizontalContentAlignment="Right" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,135,0,0" />
+                    <Label Content="%" Width="20" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,135,0,0" />
                 </Grid>
             </TabItem>
             <TabItem x:Name="TabItemConfig" Header="Configuration">
